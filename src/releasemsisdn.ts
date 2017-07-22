@@ -1,5 +1,5 @@
 import * as _request from 'request';
-import { config } from '@ses/common';
+import { config } from '@common';
 import { commonError } from './errormap';
 
 const configFile: string = 'common/itSystemServerConf.json';
