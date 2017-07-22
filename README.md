@@ -21,7 +21,7 @@
 ## Install
 
 ```
-npm install @ses/carrieritlib
+npm install @/carrieritlib
 ```
 
 ## API
