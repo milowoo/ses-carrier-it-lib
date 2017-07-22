@@ -1,7 +1,7 @@
 {
-  "name": "@ses/carrieritlib",
+  "name": "@carrieritlib",
   "version": "1.0.3",
-  "description": "SES Carrier It library",
+  "description": "Carrier It library",
   "license": "UNLICENSED",
   "scripts": {
     "clean": "rm -rf lib build reports *.js",
@@ -26,7 +26,7 @@
     "node": "^5.0.0"
   },
   "dependencies": {
-    "@ses/common": ">=6.3.1",
+    "@common": ">=6.3.1",
     "joi": "9.2.0",
     "lodash": "4.16.4",
     "request": "2.79.0"
