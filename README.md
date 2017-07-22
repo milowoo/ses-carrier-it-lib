@@ -148,7 +148,7 @@ Example:
 ```js
 
 
-import {CarrierItServer} from '@ses/carrieritlib';
+import {CarrierItServer} from '@carrieritlib';
 
 const logger = applog.logger('carry_it_lib_test');
 const carrierServer = new CarrierItServer(logger);
