@@ -1,0 +1,55 @@
+{
+  "name": "@ses/carrieritlib",
+  "version": "1.0.3",
+  "description": "SES Carrier It library",
+  "license": "UNLICENSED",
+  "scripts": {
+    "clean": "rm -rf lib build reports *.js",
+    "format": "tsfmt -r",
+    "compile": "tsc --pretty && echo TypeScript compile passed || echo TypeScript compile has error",
+    "lint": "tslint --force --project tsconfig.json",
+    "build": "npm run clean && npm run format && npm run compile && npm run lint",
+    "testall": "scripty",
+    "test": "scripty",
+    "debug": "npm run build && _mocha -c build/test/**/test-*.js | bunyan -L -o short",
+    "ci": "npm run build && npm run ci:test && npm run ci:coverage && npm run ci:lint",
+    "ci:test": "XUNIT_FILE=reports/xunit.xml istanbul cover _mocha 'build/test/**/test-*.js' -- --reporter xunit-file",
+    "ci:coverage": "remap-istanbul -i reports/coverage/coverage-final.json -t cobertura -o reports/coverage/cobertura.xml",
+    "ci:lint": "tslint --force -t pmd --project tsconfig.json > reports/pmd.xml",
+    "copybuild": "cp -R build/src lib",
+    "toc": "doctoc README.md --maxlevel 4",
+    "prepublishOnly": "npm run test && npm run copybuild && npm run toc"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "engines": {
+    "node": "^5.0.0"
+  },
+  "dependencies": {
+    "@ses/common": ">=6.3.1",
+    "joi": "9.2.0",
+    "lodash": "4.16.4",
+    "request": "2.79.0"
+  },
+  "devDependencies": {
+    "@types/nock": "8.2.0",
+    "@types/joi": "10.0.0",
+    "@types/chai": "3.4.34",
+    "@types/lodash": "4.14.41",
+    "@types/mocha": "2.2.33",
+    "@types/request": "0.0.36",
+    "@types/sinon": "1.16.32",
+    "chai": "3.5.0",
+    "doctoc": "1.2.0",
+    "mocha": "3.2.0",
+    "nock": "9.0.8",
+    "remap-istanbul": "0.6.3",
+    "scripty": "1.7.1",
+    "sinon": "1.17.7",
+    "tslint": "4.3.1",
+    "tslint-eslint-rules": "3.2.3",
+    "typescript": "2.1.5",
+    "typescript-formatter": "4.0.1",
+    "xunit-file": "1.0.0"
+  }
+}

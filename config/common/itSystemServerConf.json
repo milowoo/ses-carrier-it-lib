@@ -1,0 +1,10 @@
+{
+  "es2FQDN": "http://root:wapwap12@localhost:13240",
+  "queryImsiByIccidPath": "/esintegration/v1.0/esim/imsi?iccid=",
+  "allocMsisdnByImsiPath": "/esintegration/v1.0/esim/activatemsisdn",
+  "createEsimSubscriptionPath": "/esintegration/v1.0/esim/bss/createEsimSubscription",
+  "releaseMsisdnPath": "/esintegration/v1.0/esim/msisdn",
+  "updateMsisdnPath": "/esintegration/v1.0/esim/msisdn",
+  "deleteEsimSubscriptionPath": "/esintegration/v1.0/esim/bss/deleteEsimSubscription",
+  "alternateSmdpFqdnPath": "/esintegration/v1.0/esim/alternateSmdpFqdn"
+}
